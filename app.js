@@ -13,7 +13,7 @@ let allMaps = [];
 
 app.get("/", async (req, res) => {
 	//res.json({ message: "Hello world!" });
-	for (let index = 0; index < 10; index++) {
+	for (let index = 0; index < 5; index++) {
 		maps = await fetchMaps(index);
 		allMaps.push(maps);
 	}
