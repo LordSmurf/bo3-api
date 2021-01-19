@@ -7,7 +7,7 @@ const app = express();
 app.use(morgan("dev"));
 app.use(cors());
 
-let port = process.env.port || 3000;
+let port = process.env.PORT || 3000;
 
 app.get("/", async (req, res) => {
 	const maps = await fetchMaps(1);
