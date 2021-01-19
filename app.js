@@ -14,6 +14,6 @@ app.get("/", async (req, res) => {
 	res.json(maps);
 });
 
-app.listen(port, () => {
-	console.log(`Listening on http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+	console.log(`Listening on http://localhost:${process.env.PORT}`);
 });
