@@ -75,6 +75,7 @@ async function fetchMaps(page) {
 				break;
 
 			default:
+				rating = "Not Rated";
 				break;
 		}
 
