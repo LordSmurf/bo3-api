@@ -21,7 +21,8 @@ app.get("/", async (req, res) => {
 	} else {
 		for (let index = 0; index < 5; index++) {
 			maps = await fetchMaps(index);
-			cachedData.push(maps);
+			allMaps.push(maps);
+			cachedData = allMaps;
 			cacheTime = Date.now();
 		};
 		return res.json(cachedData);
