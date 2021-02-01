@@ -11,13 +11,22 @@ app.use(cors());
 let port = process.env.PORT || 3000;
 let allMaps = [];
 
+let cachedData;
+let cacheTime;
+
 app.get("/", async (req, res) => {
 	//res.json({ message: "Hello world!" });
-	for (let index = 0; index < 5; index++) {
-		maps = await fetchMaps(index);
-		allMaps.push(maps);
-	}
-	await res.json(allMaps);
+	if(cacheTime && cacheTime > Date.now() - 864 * 100000) {
+		return res.json(cachedData);
+	} else {
+		for (let index = 0; index < 5; index++) {
+			maps = await fetchMaps(index);
+			cachedData.push(maps);
+			cacheTime = Date.now();
+		};
+		return res.json(cachedData);
+	};
+
 });
 
 app.listen(process.env.PORT, () => {
