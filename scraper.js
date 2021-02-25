@@ -73,6 +73,24 @@ async function fetchMaps(page) {
 			case "https://community.cloudflare.steamstatic.com/public/images/sharedfiles/5-star.png?v=2":
 				rating = "Five Star";
 				break;
+			case "https://community.akami.steamstatic.com/public/images/sharedfiles/not-yet.png?v=2":
+				rating = "Not rated";
+				break;
+			case "https://community.akami.steamstatic.com/public/images/sharedfiles/1-star.png?v=2":
+				rating = "One Star";
+				break;
+			case "https://community.akami.steamstatic.com/public/images/sharedfiles/2-star.png?v=2":
+				rating = "Two Star";
+				break;
+			case "https://community.akami.steamstatic.com/public/images/sharedfiles/3-star.png?v=2":
+				rating = "Three Star";
+				break;
+			case "https://community.akami.steamstatic.com/public/images/sharedfiles/4-star.png?v=2":
+				rating = "Four Star";
+				break;
+			case "https://community.akami.steamstatic.com/public/images/sharedfiles/5-star.png?v=2":
+				rating = "Five Star";
+				break;
 
 			default:
 				rating = "Not Rated";
